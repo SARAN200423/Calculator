@@ -1,30 +1,19 @@
 package claculator;
-
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JTextField;
-
 import javax.swing.JButton;
 import java.awt.Font;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-
 public class cal {
-
 	private JFrame frame;
 	private JTextField textField;
-	
 	double first;
 	double second;
 	double result;
-	
 	String operation;
 	String answer;
-
-	/**
-	 * Launch the application.
-	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
@@ -36,18 +25,10 @@ public class cal {
 				}
 			}
 		});
-	}
-
-	/**
-	 * Create the application.
-	 */
+	} 
 	public cal() {
 		initialize();
 	}
-
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setFont(new Font("Sylfaen", Font.BOLD, 18));
@@ -55,13 +36,11 @@ public class cal {
 		frame.setBounds(100, 100, 328, 464);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
-		
 		textField = new JTextField();
 		textField.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		textField.setBounds(10, 11, 294, 65);
 		frame.getContentPane().add(textField);
 		textField.setColumns(10);
-		
 		JButton btnBackspace = new JButton("\uF0E7");
 		btnBackspace.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
